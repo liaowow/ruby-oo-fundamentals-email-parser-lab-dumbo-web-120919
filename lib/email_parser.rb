@@ -12,13 +12,11 @@ class EmailAddressParser
   attr_accessor :email_addresses
 
   def parse
-    email_arr = @email_addresses.split(" ")
-
-    new_arr = email_arr.map do |element|
-      if element.chars.last == ","
-        element = element[0...-1]
-      end
-    end
+    email_arr = @email_addresses.split(",")
+  # p email_arr
+  # puts "here's puts:"
+  # puts "here's print:"
+  # print email_arr
 
     new_arr.uniq do |element|
       element
