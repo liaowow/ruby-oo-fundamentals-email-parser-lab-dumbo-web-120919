@@ -13,6 +13,7 @@ class EmailAddressParser
 
   def parse
     email_arr = @email_addresses.split(" ")
+    bindiny.pry
     email_arr.uniq do |element|
       element
     end
