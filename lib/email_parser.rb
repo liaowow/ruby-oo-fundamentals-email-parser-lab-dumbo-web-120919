@@ -9,7 +9,9 @@ class EmailAddressParser
 
   def parse(email_addresses)
     email_arr = @email_addresses.split(" ")
-    email_arr.uniq
+    email_arr.uniq do |element|
+      element
+    end
   end
 
 
