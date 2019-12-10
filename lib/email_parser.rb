@@ -18,7 +18,7 @@ class EmailAddressParser
   # puts "here's print:"
   # print email_arr
 
-    new_arr.uniq do |element|
+    email_arr.uniq do |element|
       element
     end
   end
