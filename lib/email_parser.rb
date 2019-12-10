@@ -12,7 +12,7 @@ class EmailAddressParser
   attr_accessor :email_addresses
 
   def parse
-    email_arr = @email_addresses.split(",")
+    email_arr = @email_addresses.split(, | )
   # p email_arr
   # puts "here's puts:"
   # puts "here's print:"
