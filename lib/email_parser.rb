@@ -13,7 +13,14 @@ class EmailAddressParser
 
   def parse
     email_arr = @email_addresses.split(" ")
-    email_arr.uniq do |element|
+
+    new_arr = email_arr.map do |element|
+      if element.chars.last == ","
+        element = element[0...-1]
+      end
+    end
+
+    new_arr.uniq do |element|
       element
     end
   end
